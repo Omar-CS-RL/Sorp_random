@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti 💖</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe4e1;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #d6336c;
+        }
+        p {
+            font-size: 20px;
+            color: #333;
+            min-height: 50px;
+            transition: opacity 0.5s ease-in-out;
+        }
+        button {
+            background-color: #d6336c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Para Tí Gabriela 💖</h1>
+        <p id="frase">Haz clic aquí hermosa :3</p>
+        <button onclick="mostrarFrase()">Ver Mensaje</button>
+    </div>
+
+    <script>
+        // Lista de frases personalizadas
+        const frases = [
+            "Me encanta tu sonrisa, me ilumina cuando la veo ✨",
+            "Eres muy especial para mí, siempre andas en mi mente 💕",
+            "Cada minuto contigo es un regalo uwu 🎁",
+            "Quisiera detener el tiempo para disfrutar más de este momento junto a tí bebé u.u",
+            "Si tuviera que elegir de nuevo, siempre serías tú ❤️",
+            "Eres un amor de persona, y es una de las cosas que más me gusta de tí🥰",
+            "Me das un abrazo Gabriela :3 ? Y unos besitos más ❤️",
+            "Amo pasar tiempo contigo justo como ahora, te quiero mucho",
+            "Disfruto mirarte de cerca como ahora para sentirme en paz 💕"
+        ];
+
+        function mostrarFrase() {
+            const fraseElemento = document.getElementById("frase");
+            const nuevaFrase = frases[Math.floor(Math.random() * frases.length)];
+            fraseElemento.style.opacity = "0"; // Desvanecer la frase
+            setTimeout(() => {
+                fraseElemento.textContent = nuevaFrase;
+                fraseElemento.style.opacity = "1"; // Aparecer la nueva frase
+            }, 500);
+        }
+    </script>
+
+</body>
+</html>
